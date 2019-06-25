@@ -35,13 +35,34 @@ bool LinkedList::deleteFirst(int *val){
 }
 
 
+void LinkedList::printList(){
+  Node* curr = head;
+
+  std::cout<<"Printing List "<<__FILE__<<" "<<__FUNCTION__<<std::endl;
+  
+  while(curr != nullptr){
+    std::cout<<curr->i<<" ";
+    curr = curr->next;
+  }
+    
+}
 
 int main(int argc, char *argv[]){
   LinkedList l;
+  int i,x,count=0;
 
-  int x;
+  l.printList();
   
-  l.insert(100000);
+  std::cout<<"Linked List. Enter 10 numbers. Press enter after each number"<<std::endl;
+  
+  while(count!=10){
+    std::cin>>i;
+    l.insert(i);
+    count++;
+  }
+
+  l.printList();
+  
   l.deleteFirst(&x);
 
   std::cout<<std::endl<<"deleteFirst = "<<x<<std::endl;

@@ -17,4 +17,5 @@ class LinkedList{
   bool deleteFirst(int* val);
   int deleteLast();
   int deleteLocation(int l);
+  void printList();
 };
