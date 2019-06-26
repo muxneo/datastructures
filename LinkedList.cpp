@@ -35,15 +35,34 @@ bool LinkedList::deleteFirst(int *val){
 }
 
 
+bool LinkedList::deleteLast(){
+
+  if(head == nullptr)
+    return false;
+
+  Node *prev,*curr = head;
+  
+  while (curr->next != nullptr){
+    prev = curr;
+    curr = curr->next;
+  }
+
+  prev->next = nullptr;
+  delete curr;
+    
+}
+
 void LinkedList::printList(){
   Node* curr = head;
 
-  std::cout<<"Printing List "<<__FILE__<<" "<<__FUNCTION__<<std::endl;
+  std::cout<<std::endl<<"Printing List "<<__FILE__<<" "<<__FUNCTION__<<std::endl;
   
   while(curr != nullptr){
     std::cout<<curr->i<<" ";
     curr = curr->next;
   }
+
+  std::cout<<std::endl;
     
 }
 
@@ -63,7 +82,8 @@ int main(int argc, char *argv[]){
 
   l.printList();
   
-  l.deleteFirst(&x);
-
-  std::cout<<std::endl<<"deleteFirst = "<<x<<std::endl;
+  //l.deleteFirst(&x);
+  l.deleteLast();
+  l.printList();
+  //std::cout<<std::endl<<"deleteFirst = "<<x<<std::endl;
 }

@@ -15,7 +15,7 @@ class LinkedList{
   LinkedList();
   bool insert(int a);
   bool deleteFirst(int* val);
-  int deleteLast();
+  bool deleteLast();
   int deleteLocation(int l);
   void printList();
 };
