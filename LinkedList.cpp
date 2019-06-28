@@ -66,24 +66,3 @@ void LinkedList::printList(){
     
 }
 
-int main(int argc, char *argv[]){
-  LinkedList l;
-  int i,x,count=0;
-
-  l.printList();
-  
-  std::cout<<"Linked List. Enter 10 numbers. Press enter after each number"<<std::endl;
-  
-  while(count!=10){
-    std::cin>>i;
-    l.insert(i);
-    count++;
-  }
-
-  l.printList();
-  
-  //l.deleteFirst(&x);
-  l.deleteLast();
-  l.printList();
-  //std::cout<<std::endl<<"deleteFirst = "<<x<<std::endl;
-}
