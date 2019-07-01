@@ -1,4 +1,5 @@
 #include "LinkedList.h"
+#include "BubbleSort.h"
 
 using namespace std;
 
@@ -10,6 +11,12 @@ void printOptions(){
 
 void BubbleSortRun(){
   cout<<"BubbleSort"<<endl;
+  BubbleSort bs;
+  bs.printElem();
+  bs.sort();
+  bs.printElem();
+  
+  
 }
 
 bool LinkedListRun(){

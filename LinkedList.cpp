@@ -1,5 +1,6 @@
 #include "LinkedList.h"
 
+using namespace std;
 Node::Node(int a):i(a){
   this->next = nullptr;
 }
@@ -55,14 +56,14 @@ bool LinkedList::deleteLast(){
 void LinkedList::printList(){
   Node* curr = head;
 
-  std::cout<<std::endl<<"Printing List "<<__FILE__<<" "<<__FUNCTION__<<std::endl;
+  cout<<endl<<"Printing List "<<__FILE__<<" "<<__FUNCTION__<<endl;
   
   while(curr != nullptr){
-    std::cout<<curr->i<<" ";
+    cout<<curr->i<<" ";
     curr = curr->next;
   }
 
-  std::cout<<std::endl;
+  cout<<endl;
     
 }
 
