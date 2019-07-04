@@ -24,19 +24,30 @@ void BubbleSort::printElem(){
 
 void BubbleSort::swap(int index){
   int temp;
-  cout<<"elem["<<index<<"] = "<<elem[index]<<endl;
-  cout<<"elem["<<index+1<<"] = "<<elem[index+1]<<endl;
+  //cout<<"elem["<<index<<"] = "<<elem[index]<<endl;
+  //cout<<"elem["<<index+1<<"] = "<<elem[index+1]<<endl;
   temp = elem[index];
   elem[index] = elem[index+1];
   elem[index+1] = temp;  
 }
 
-void BubbleSort::sort(){
+void BubbleSort::sortAscending(){
   int i, j;
 
   for(i=sizeof(elem)/sizeof(double);i>0;i--){
     for(j=0;j<i-1;j++){
       if(elem[j]>elem[j+1])
+	swap(j);      
+    }
+  }
+}
+
+void BubbleSort::sortDescending(){
+int i, j;
+
+  for(i=sizeof(elem)/sizeof(double);i>0;i--){
+    for(j=0;j<i-1;j++){
+      if(elem[j]<elem[j+1])
 	swap(j);      
     }
   }

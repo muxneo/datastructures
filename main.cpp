@@ -1,5 +1,6 @@
 #include "LinkedList.h"
 #include "BubbleSort.h"
+#include "SpiralPrint.h"
 
 using namespace std;
 
@@ -7,16 +8,16 @@ void printOptions(){
   cout<<"What would you like to do:"<<endl;
   cout<<"1) BubbleSort"<<endl;
   cout<<"2) LinkedList"<<endl;
+  cout<<"3) SpiralPrint"<<endl;
+  cout<<endl;
 }
 
 void BubbleSortRun(){
   cout<<"BubbleSort"<<endl;
   BubbleSort bs;
   bs.printElem();
-  bs.sort();
+  bs.sortDescending();
   bs.printElem();
-  
-  
 }
 
 bool LinkedListRun(){
@@ -41,6 +42,11 @@ bool LinkedListRun(){
   //cout<<endl<<"deleteFirst = "<<x<<endl;
 }
 
+bool SpiralPrintRun(){
+  SpiralPrint s;
+  s.printArray();
+}
+
 bool run(){
 
   int option;
@@ -50,6 +56,8 @@ bool run(){
   case 1: BubbleSortRun();
     break;
   case 2: LinkedListRun();
+    break;
+  case 3: SpiralPrintRun();
     break;
   default:
     break;    

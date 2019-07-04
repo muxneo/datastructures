@@ -10,5 +10,6 @@ class BubbleSort{
   BubbleSort();
   void printElem();
   void swap(int inde);
-  void sort();
+  void sortAscending();
+  void sortDescending();
 };
