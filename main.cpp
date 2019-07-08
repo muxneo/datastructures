@@ -1,6 +1,7 @@
 #include "LinkedList.h"
 #include "BubbleSort.h"
 #include "SpiralPrint.h"
+#include "InsertionSort.h"
 
 using namespace std;
 
@@ -9,6 +10,7 @@ void printOptions(){
   cout<<"1) BubbleSort"<<endl;
   cout<<"2) LinkedList"<<endl;
   cout<<"3) SpiralPrint"<<endl;
+  cout<<"4) InsertionSort"<<endl;
   cout<<endl;
 }
 
@@ -45,6 +47,16 @@ bool LinkedListRun(){
 bool SpiralPrintRun(){
   SpiralPrint s;
   s.printArray();
+  s.printSpiral();
+}
+
+void InsertionSortRun(){
+  InsertionSort is;
+  is.printElem();
+  is.sortDescending();
+  is.printElem();
+  is.sortAscending();
+  is.printElem();
 }
 
 bool run(){
@@ -58,6 +70,8 @@ bool run(){
   case 2: LinkedListRun();
     break;
   case 3: SpiralPrintRun();
+    break;
+  case 4: InsertionSortRun();
     break;
   default:
     break;    
