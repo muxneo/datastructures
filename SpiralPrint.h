@@ -2,9 +2,10 @@
 
 class SpiralPrint{
  private:
-  int arr[3][3];
+  int arr[4][4];
 
  public:
   SpiralPrint();
   void printArray();
+  void printSpiral();
 };
